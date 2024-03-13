@@ -1,4 +1,3 @@
-
 provider "aws" {
   region = var.region
 }
@@ -22,7 +21,7 @@ resource "aws_db_subnet_group" "fiap" {
   subnet_ids = module.vpc.public_subnets
 
   tags = {
-    Name = "fiap"
+    Name = "Fiap"
   }
 }
 
@@ -76,6 +75,6 @@ resource "aws_db_instance" "fiap" {
   db_subnet_group_name   = aws_db_subnet_group.fiap.name
   vpc_security_group_ids = [aws_security_group.rds.id]
   parameter_group_name   = aws_db_parameter_group.fiap.name
-  publicly_accessible    = true
+  publicly_accessible    = false
   skip_final_snapshot    = true
 }
