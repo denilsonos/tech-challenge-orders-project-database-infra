@@ -9,7 +9,8 @@ variable "db_user" {
   sensitive   = true
 }
 
+
 variable "db_password" {
-  description = "RDS user password"
+  description = "RDS root user password"
   sensitive   = true
 }
