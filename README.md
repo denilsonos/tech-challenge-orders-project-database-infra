@@ -8,7 +8,7 @@
   > export AWS_SECRET_ACCESS_KEY=[your-key-secret]
 - configure db_user and db_password as:
   > export TF_VAR_db_user="fiap"
-  > export TF_VAR_db_password="n3wpass"
+  > export TF_VAR_db_password="admin123"
 
 ### Run
 ```shell
