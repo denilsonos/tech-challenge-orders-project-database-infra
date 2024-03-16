@@ -3,6 +3,7 @@ provider "aws" {
   region = var.region
 }
 
+# Este bloco é opcional se você estiver apenas usando a VPC padrão sem necessidade de referenciá-la explicitamente
 data "aws_vpc" "default" {
   default = true
 }
@@ -29,7 +30,7 @@ resource "aws_default_security_group" "default" {
 }
 
 resource "aws_db_instance" "mysql_db_instance" {
-  identifier             = "fiap"
+  identifier             = "mysqldbinstance"
   instance_class         = "db.t3.micro"
   allocated_storage      = 15
   max_allocated_storage  = 30
