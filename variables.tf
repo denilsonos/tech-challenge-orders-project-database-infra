@@ -3,6 +3,10 @@ variable "region" {
   default     = "us-east-1"
   description = "AWS region"
 }
+variable "db_name" {
+  description = "RDS database name"
+  sensitive   = true
+}
 
 variable "db_user" {
   description = "RDS username"
