@@ -12,10 +12,6 @@ jobs:
     env:  # Defina as variáveis de ambiente aqui para que estejam disponíveis para todos os passos.
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}
-      TF_VAR_db_name: ${{ secrets.DB_NAME }}
-      TF_VAR_db_user: ${{ secrets.DB_USER }}
-      TF_VAR_db_password: ${{ secrets.DB_PASSWORD }}
       TF_VAR_region: ${{ secrets.region }}
 
     steps:
